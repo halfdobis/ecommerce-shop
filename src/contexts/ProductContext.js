@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
 
 // create context
-export const productContext = createContext();
+export const ProductContext = createContext();
 
 const ProductProvider = ({ children }) => {
   // products state
@@ -16,9 +16,9 @@ const ProductProvider = ({ children }) => {
     fetchProducts();
   }, []);
   return (
-    <productContext.Provider value={{ products }}>
+    <ProductContext.Provider value={{ products }}>
       {children}
-    </productContext.Provider>
+    </ProductContext.Provider>
   );
 };
 
